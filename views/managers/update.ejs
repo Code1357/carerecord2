@@ -1,0 +1,65 @@
+<head>
+  <link href="/css/layout.css" rel="stylesheet">
+  <link href="/css/modal.css" rel="stylesheet">
+</head>
+
+<%- include('m_header'); %>
+
+<div id="mask" class="hidden"></div> <!-- 背景全体を暗くする -->
+
+<div class="data_form_update">
+<p class="annotation"><small class="annotation_staff_update"> 名前と役職のみ変更が可能です</small></p>
+  <form class="signup" action="<%=`/managers/update/${staffId}/update?_method=PUT`%>" method="POST">
+    <label for="inputEmployee">社員番号</label>
+    <input type="number" minlength="6" maxlength="6" name="employee_id" id="inputEmployee" class="update_form"
+      placeholder="社員番号" value="<%= staffUpdate[0].employee_id %>" readonly>
+    <br />
+    <label for="inputHereDate">入社日</label>
+    <input type="" name="hire_data" id="inputHereDate" class="update_form" placeholder="yyyy/mm/dd" value="<%= hireData %>"
+      readonly>
+    <br />
+    <label for="inputUsername">名前</label>
+    <input type="text" name="staff_name" id="inputUsername" class="form-control" placeholder="名前"
+      value="<%= staffUpdate[0].staff_name %> ">
+    <br />
+    <label for="inputPassword">Password</label>
+    <input type="password" name="hash" id="inputPassword" class="update_form" placeholder="password" value="*********"
+      readonly>
+    <br />
+    <label for="inputBirthday">生年月日</label>
+    <input type="" name="birthday" id="inputBirthday" class="update_form" placeholder="" value="<%= birthday %>"
+      readonly>
+    <br />
+    <label for="inputGender">性別</label>
+    <input type="number" name="genders_gender_id" id="inputGender" class="update_form"
+      value="<%= staffUpdate[0].genders_gender_id %>" min="1" max="2" placeholder="1:男,2:女" readonly>
+    <br />
+    <label for="inputPosition">役職</label>
+    <input type="number" name="position_lists_position_id" id="inputPosition" class="form-control"
+      value="<%= staffUpdate[0].position_lists_position_id %>" min="1" max="3" placeholder="1:管理職,2:一般,3:見習い"　required>
+    <br />
+
+    <section id="modal" class="hidden">
+    <div class="output">
+      <h4>こちらの内容で更新しますか？</h4>
+      <h6 id="recMessage"></h6>
+      <p id="outputEmployee"></p>
+      <p id="outputHereDate"></p>
+      <p id="outputUsername"></p>
+      <p id="outPassword"></p>
+      <p id="outputBirthday"></p>
+      <p id="outputGender"></p>
+      <p id="outputPosition"></p>
+      </div>
+
+      <button id="close" class="btn" name='action2' value="ぼたん2だよ">戻る</button>
+      <button class="btn" name='action' value="ぼたんだよ">更新</button>
+    </section>
+  </form>
+  <div id="open">
+    <div class="modal_to_btn">
+      <button id="open_modal">更新</button>
+    </div>
+  </div>
+
+  <script src="/js/modalManager.js"></script>

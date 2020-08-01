@@ -1,0 +1,1232 @@
+* {
+	margin:0; padding:0;
+}
+
+/* 複数共通 */
+body {
+  width: 1280px;
+  width: 100%;
+  height: 800px;
+  margin: auto;
+  font-family: "M PLUS Rounded 1c";
+  background-color: lavenderblush;
+}
+.container {
+  height: auto;
+}
+label {
+  width: 100px;
+  display: inline-block;
+  text-align: right;
+  margin-right: 10px;
+}
+.m_data_form {
+  text-align: center;
+  margin-top: 80px;
+}
+.annotation {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+/* index.ejs */
+.top_index {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  margin-top: 170px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* -------- リンク処理 */
+.start {
+  text-decoration: none;
+  color: teal;
+}
+.start:hover {
+  color: darkkhaki;
+}
+.greeting {
+  text-align: center;
+  color: orchid;
+}
+.greeting_title {
+  font-size: 35px;
+}
+.start,
+.greeting_sub {
+  font-size: 20px;
+}
+
+/* layout.ejs */
+.wrapper {
+  width: 100%;
+}
+.login_main {
+  margin-top: 5px;
+  margin-bottom: 0px;
+  margin-left: 5px;
+  font-size: 25px;
+}
+.login_sub {
+  margin-top: 3px;
+  margin-bottom: 0px;
+  margin-left: 10px;
+  font-size: 15px;
+}
+.none {
+  display: none;
+}
+.flash {
+  display: inline-block;
+  text-align: left;
+  margin-top: 2px;
+  margin-bottom: 0px;
+  margin-left: 5px;
+  margin-right: 7px;
+  color: crimson;
+}
+
+/* login.ejs,etc */
+.annotation_login {
+  width: 400px;
+  display: inline-block;
+  padding-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  color: lightcoral;
+}
+.annotation_user,
+.annotation_staff {
+  width: 400px;
+  display: inline-block;
+  padding-bottom: 20px;
+  margin-left: 210px;
+  margin-right: auto;
+  text-align: left;
+  color: lightcoral;
+}
+.annotation_staff_update {
+  width: 400px;
+  display: inline-block;
+  padding-bottom: 20px;
+  margin-left: 180px;
+  margin-right: auto;
+  text-align: left;
+  color: lightcoral;
+}
+
+.annotation_user_update {
+  width: 400px;
+  display: inline-block;
+  padding-bottom: 20px;
+  margin-left: 220px;
+  margin-right: auto;
+  text-align: left;
+  color: lightcoral;
+}
+
+.sample_span {
+  color: darkgreen;
+}
+
+.sample_span2 {
+  color: blueviolet;
+}
+
+/*  -------- btn */
+.m_btn_container {
+  width: 370px;
+  display: inline-block;
+  text-align: center;
+}
+.m_btn_container2 {
+  width: 370px;
+  display: inline-block;
+  text-align: right;
+}
+
+.signup_btn,
+.modal_off_btn,
+.modal_on_btn,
+.modal_to_btn{
+  width: 370px;
+  display: inline-block;
+  text-align: right;
+}
+
+.reset {
+  width: 100%;
+  text-align: center;
+}
+.reset_btn{
+  width: 370px;
+  display: inline-block;
+  text-align: center;
+}
+.reset2{
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin-left: 144px;
+}
+.m_btn {
+  margin: 20px;
+}
+.modal_off_btn,
+.modal_to_btn,
+.signup_btn {
+  margin-top: 7px;
+  margin-right: 50px;
+}
+.modal_on_btn,
+.reset_btn {
+  margin-top: 2px;
+  margin-right: 50px;
+}
+.reset_btn_text {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.modal_on_btn_text {
+  padding-left: 13px;
+  padding-right: 12px;
+}
+.modal_btn {
+  margin-left: 30px;
+}
+
+/* login.ejs */
+.info_compliance {
+  width: 60%;
+  height: 290px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  color: dimgrey;
+  overflow: scroll;
+  border: 1px solid;
+  border-color: lightslategrey;
+  background-color: rgb(250, 248, 232);
+}
+.compliance_title {
+  width: 60%;
+  margin-top: 50px;
+  margin-bottom: 0px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 14px;
+  color: rgb(170, 68, 218);
+}
+
+/* new.ejs,new2.ejs,newConfirmation.ejs,update.ejs*/
+/* new.ejs,userRecord,recordSearch,update.ejs,pastRecord.ejs*/
+.data_form,
+.newConfirmation,
+.newUserConfirmation {
+  margin-top: 50px;
+  width: 100%;
+  text-align: center;
+}
+.data_from_flash {
+  margin-top: 130px;
+  width: 100%;
+  text-align: center;
+  margin-left: 22px;
+  color: crimson;
+}
+.data_form_update {
+  margin-top: 120px;
+  width: 100%;
+  text-align: center;
+}
+.signup,
+#open,
+.newConfirmation_employee,
+.newUserConfirmation_user {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+input {
+  display: inline-block;
+  text-align: left;
+  width: 170px;
+  margin-right: 0px;
+}
+.newConfirmation_list,
+.newUserConfirmation_list {
+  display: inline-block;
+  text-align: left;
+  width: 200px;
+  margin-right: 0px;
+  margin-left: 55px;
+}
+.newConfirmation,
+.newUserConfirmation {
+  color: crimson;
+}
+.update_form {
+  border: none;
+  background: none;
+}
+
+/* footer固定*/
+.body_wrapper {
+  display: flex;
+  flex-direction: column;
+}
+footer {
+  margin-top: auto;
+}
+
+/* test heder_footer.css */
+.header,
+.logout {
+  width: 1280px;
+  width: 100%;
+  margin: auto;
+}
+.logout {
+  text-align: right;
+}
+.logout_btn {
+  margin-top: 10px;
+  margin-right: 20px;
+}
+.m_title,
+.r_title {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 5px;
+}
+.m_border,
+.r_border,
+.border {
+  border-bottom: 1px solid;
+  border-color: lightslategrey;
+  margin-right: 5px;
+  margin-left: 5px;
+  margin-top: 4px;
+  margin-bottom: 0px;
+}
+.border {
+  margin-top: 50px;
+}
+.staff_id,
+small {
+  width: 250px;
+  display: inline-block;
+  margin-top: 7px;
+  margin-bottom: 0px;
+  margin-right: 10px;
+  color: dimgrey;
+}
+small {
+  margin-top: 0px;
+  margin-right: 10px;
+}
+.m_login,
+.r_login {
+  height: 2px;
+  width: 100%;
+  margin-bottom: none;
+  padding: none;
+  text-align: right;
+  float: left;
+}
+.nav1,
+.nav2 {
+  width: 50%;
+  overflow: hidden;
+  text-align: left;
+  display: inline-block;
+}
+.nav-title {
+  width: 220px;
+  text-align: left;
+}
+li {
+  width: 80px;
+  text-align: center;
+  display: inline-block;
+}
+.nav1,
+.nav2,
+li,
+a {
+  text-decoration: none;
+}
+ul {
+  margin-top: 3px;
+  margin-bottom: 3px;
+  margin-left: 5px;
+  padding-left: 10px;
+}
+
+/* -------- リンク処理 */
+.nav_new_a,
+.nav_list_a {
+  color: teal;
+}
+.nav_new_a:hover,
+.nav_list_a:hover {
+  color: darkkhaki;
+}
+
+/* test listInfo.css */
+
+/* staffsList.ejs, usersList, staffInfo.ejs, userInfo.ejs */
+/* userRecord, recordSearch.ejs, pastRecord.ejs */
+.list_wrapper {
+  float: left;
+  width: 210px;
+  height: 430px;
+  margin-top: 20px;
+  margin-left: 30px;
+  text-align: center;
+  border: 1px solid;
+  border-color: lightslategrey;
+  background-color: rgb(255, 209, 216);
+}
+.staff_list,
+.user_list {
+  width: 180px;
+  height: 400px;
+  margin-left: 10px;
+  margin-right: 10px;
+  display: inline-block;
+  text-align: left;
+  overflow: scroll;
+  background-color: rgb(255, 209, 216);
+}
+.staff_list_inner,
+.user_list_inner,
+.staff_list_ul,
+.user_list_ul {
+  width: 85%;
+  display: inline-block;
+  background-color: white;
+  border: 0.3px solid;
+  border-color: lightgrey;
+}
+.staff_list_name,
+.user_list_name {
+  display: inline-block;
+  text-align: left;
+  width: 153px;
+  font-size: 14px;
+}
+.staffs_list_title,
+.users_list_title {
+  display: inline-block;
+  margin-left: -20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.annotation_list,
+.annotation_list_user {
+  color: lightcoral;
+}
+
+/* -------- リンク処理 */
+.staff_list_name,
+.user_list_name {
+  text-decoration: none;
+  color: teal;
+}
+.staff_list_name:hover,
+.user_list_name:hover {
+  color: darkkhaki;
+}
+
+/* staffInfo.ejs, userInfo.ejs*/
+/* userRecord, recordSearch.ejs, pastRecord.ejs */
+.staff_info {
+  margin-top: 18px;
+  display: inline-block;
+  margin-left: 0px;
+  margin-left: 20%;
+}
+.user_info {
+  margin-top: 20px;
+  display: inline-block;
+  margin-left: 0px;
+  margin-left: 20%;
+}
+.annotation_list,
+.annotation_list_user {
+  margin-top: 26px;
+}
+
+table {
+  width: 100%;
+}
+
+.item {
+  text-align: right;
+}
+
+.info {
+  text-align: left;
+}
+.record_btn,
+.update_btn,
+.search_btn {
+  border-style: none;
+  background-color: transparent;
+  font-size: 14px;
+}
+
+/* test recorder.css */
+.data_form_user_record,
+.data_form_user_search {
+  margin-top: 18px;
+  padding-left: 300px;
+  width: 100%;
+  text-align: left;
+}
+.modal_btn_area {
+  text-align: center;
+}
+.recorder {
+  resize: none;
+  width: 50%;
+  height: 428px;
+  margin-top: 1px;
+  margin-left: 0px;
+  display: inline-block;
+}
+
+.recorderDate,
+.searchDate {
+  width: 250px;
+}
+.record_target,
+.search_target {
+  margin-bottom: 0px;
+  font-size: 14px;
+}
+
+.search_btn_record_page {
+  border-style: none;
+  background-color: transparent;
+  font-size: 14px;
+}
+
+.reset_btn,
+.modal_to_btn_record {
+  width: 70px;
+  float: left;
+  margin: 0px;
+}
+.reset_btn,
+.modal_to_btn_record {
+  width: 70px;
+  float: left;
+  margin: 0px;
+}
+.modal_to_btn_record{
+  margin-left: 5px;
+}
+
+.search_page_search_btn {
+  margin-top: 6px;
+}
+
+.search_result {
+  width: 50%;
+  height: 410px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  margin-top: 6px;
+  margin-left: 300px;
+  color: dimgrey;
+  overflow: scroll;
+  border: 1px solid;
+  border-color: lightslategrey;
+  background-color: rgb(250, 248, 232);
+}
+.result_date,
+.result_care_record,
+.result_care_records_staff_name {
+  margin: 0px;
+}
+
+.result_border {
+  border-bottom: 1px solid;
+  border-color: lightslategrey;
+  margin-right: 0px;
+  margin-left: 0px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.result_date,
+.result_care_records_staff_name {
+  font-size: 12px;
+}
+.result_date {
+  float: left;
+  color: rgb(109, 25, 46);
+}
+.result_care_records_staff_name {
+  color: darkgreen;
+}
+.result_care_record {
+  font-size: 14px;
+}
+
+/* -------- リンク処理 */
+.update_staff_info,
+.update_user_info {
+  color: rgb(118, 33, 139);
+}
+.update_staff_info:hover,
+.update_user_info:hover {
+  color: rgb(107, 173, 189);
+}
+
+
+
+@media screen and  (min-width:0px) and (min-width: 800px) {
+  .nav_cover, .explanation, .explanation2 {
+    display: none;
+  }
+}
+
+@media screen and  (min-width:0px) and (max-width: 800px) {
+
+  /* 800px以下に適応 */
+  /* 複数共通 */
+body {
+  width: 100%;
+  margin: auto;
+  
+}
+.container {
+  height: auto;
+}
+label {
+  width: 80px;
+  display: inline-block;
+  text-align: right;
+  margin-right: 10px;
+}
+.m_data_form {
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* index.ejs */
+.top_index {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  margin-top: 170px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* -------- リンク処理 */
+.start {
+  text-decoration: none;
+  color: teal;
+}
+.start:hover {
+  color: darkkhaki;
+}
+.greeting {
+  text-align: center;
+  color: orchid;
+}
+.greeting_title {
+  display: none;
+}
+.start,
+.greeting_sub {
+  font-size: 15px;
+}
+
+/* layout.ejs */
+.wrapper {
+  width: 100%;
+}
+.login_main {
+  display: none;
+}
+.login_sub {
+  margin-top: 3px;
+  margin-bottom: 0px;
+  margin-left: 10px;
+  font-size: 15px;
+}
+.none {
+ display: none;
+}
+.flash {
+  display: inline-block;
+  text-align: left;
+  margin-top: 2px;
+  margin-bottom: 0px;
+  margin-left: 3px;
+  margin-right: 3px;
+  color: crimson;
+  font-size: 12px;
+}
+
+/* login.ejs,etc */
+.annotation,
+ .explanation,
+ .explanation2 {
+  font-size: 12px;
+  margin: 10px;
+}
+.annotation_login {
+  width: 100%;
+  display: inline-block;
+  padding-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  color: lightcoral;
+}
+
+ .explanation{
+   margin-bottom: 400px;
+ }
+ .explanation,
+.explanation2 {
+  width: 100%;
+  display: inline-block;
+  padding-bottom: 0px;
+  margin-left: 70px;
+  margin-right: auto;
+  text-align: left;
+  color: lightcoral;
+}
+.annotation_staff,
+.explanation {
+  width: 100%;
+  display: inline-block;
+  padding-bottom: 20px;
+  margin-left: 70px;
+  margin-right: auto;
+  text-align: left;
+  color: lightcoral;
+}
+.annotation_user{
+  width: 100%;
+  display: inline-block;
+  padding-bottom: 20px;
+  margin-left: 20px;
+  margin-right: auto;
+  text-align: center;
+  color: lightcoral;
+}
+.annotation_staff_update,
+.annotation_user_update {
+  width: 100%;
+  display: inline-block;
+  padding-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: lightcoral;
+}
+
+.sample_span {
+  color: darkgreen;
+}
+
+.sample_span2 {
+  color: blueviolet;
+}
+
+/*  -------- btn */
+.m_btn_container,
+.modal_off_btn,
+.modal_on_btn,
+.modal_to_btn,
+.signup_btn,
+.reset_btn {
+  width: 333px;
+  display: inline-block;
+  text-align: right;
+}
+.reset {
+  width: 100%;
+  text-align: center;
+}
+.m_btn {
+  margin: 20px;
+}
+.modal_off_btn,
+.modal_to_btn,
+.signup_btn {
+  margin-top: 7px;
+  margin-right: px;
+}
+.modal_on_btn,
+.reset_btn {
+  margin-top: 2px;
+  margin-right: 50px;
+}
+.reset_btn_text {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.modal_on_btn_text {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.modal_btn {
+  margin-left: 30px;
+}
+
+/* login.ejs */
+.info_compliance {
+  width: 60%;
+  height: 200px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  color: dimgrey;
+  overflow: scroll;
+  border: 1px solid;
+  border-color: lightslategrey;
+  background-color: rgb(250, 248, 232);
+  font-size: 11px;
+}
+.compliance_title {
+  width: 70%;
+  margin-top: 30px;
+  margin-bottom: 0px;
+  font-size: 10.5px;
+  color: rgb(170, 68, 218);
+}
+
+/* new.ejs,new2.ejs,newConfirmation.ejs,update.ejs*/
+/* new.ejs,userRecord,recordSearch,update.ejs,pastRecord.ejs*/
+.data_form,
+.newConfirmation,
+.newUserConfirmation {
+  margin-top: 50px;
+  width: 100%;
+  text-align: center;
+}
+.data_from_flash {
+  margin-top: 118px;
+  width: 100%;
+  text-align: center;
+  margin-left: 22px;
+  color: crimson;
+}
+
+.data_form_update {
+  margin-top: 50px;
+  width: 100%;
+  text-align: center;
+}
+.signup,
+#open,
+.newConfirmation_employee,
+.newUserConfirmation_user {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+input {
+  display: inline-block;
+  text-align: left;
+  width: 170px;
+  margin-right: 0px;
+}
+.newConfirmation_list,
+.newUserConfirmation_list {
+  display: inline-block;
+  text-align: left;
+  width: 200px;
+  margin-right: 0px;
+  margin-left: 55px;
+}
+.newConfirmation,
+.newUserConfirmation {
+  color: crimson;
+}
+.update_form {
+  border: none;
+  background: none;
+}
+
+/* footer固定*/
+.body_wrapper {
+  display: flex;
+  flex-direction: column;
+}
+footer {
+  margin-top: auto;
+}
+
+/* test heder_footer.css */
+.header,
+.logout {
+  width: 1280px;
+  width: 100%;
+  margin: auto;
+}
+.logout {
+  text-align: right;
+}
+.logout_btn {
+  margin-top: 10px;
+  margin-right: 20px;
+}
+.m_title,
+.r_title {
+  display: none;
+}
+.m_border,
+.r_border,
+.border {
+  border-bottom: 1px solid;
+  border-color: lightslategrey;
+  margin-right: 5px;
+  margin-left: 5px;
+  margin-top: 4px;
+  margin-bottom: 0px;
+}
+.border {
+  margin-top: 50px;
+}
+.staff_id,
+small {
+  width: 250px;
+  display: inline-block;
+  margin-top: 7px;
+  margin-bottom: 0px;
+  margin-right: 10px;
+  color: dimgrey;
+}
+small {
+  margin-top: 0px;
+  margin-right: 10px;
+}
+.m_login,
+.r_login {
+  height: 2px;
+  width: 100%;
+  margin-bottom: none;
+  padding: none;
+  text-align: right;
+  float: left;
+}
+.nav1,
+.nav2 {
+  width: 50%;
+  overflow: hidden;
+  text-align: left;
+  display: inline-block;
+}
+.nav-title {
+  width: 220px;
+  text-align: left;
+}
+.info_title{
+  font-size: 14px;
+}
+li {
+  width: 100%;
+  text-align: left;
+  display: inline-block;
+}
+.nav1,
+.nav2,
+li,
+a {
+  text-decoration: none;
+}
+ul {
+  margin-top: 3px;
+  margin-bottom: 3px;
+  margin-left: 5px;
+  padding-left: 10px;
+}
+
+/* -------- リンク処理 */
+.nav_new_a,
+.nav_list_a,
+.nav_cover {
+  color: teal;
+  font-size: 14px;
+}
+.nav_new_a:hover,
+.nav_list_a:hover,
+.nav_cover:hover {
+  color: darkkhaki;
+}
+
+/* test listInfo.css */
+
+/* staffsList.ejs, usersList, staffInfo.ejs, userInfo.ejs */
+/* userRecord, recordSearch.ejs, pastRecord.ejs */
+
+.cover{
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  opacity: 0.9;
+  position: fixed;
+  top:0;
+  z-index: 2;
+  /* ボタンを押す前は見えないようにメニューは画面外にずらす */
+  transform: translateY(-200%);
+  transition: .5s;
+}
+
+
+
+/*ボタンをクリックするとactiveクラスが付与される*/
+.active{
+  /* Y方向に要素を移動させる */
+  transform: translateY(27%);
+  transition: .5s;
+}
+
+.nav_cover{
+  cursor: pointer;
+  font-size: 14px;
+  z-index: 3;
+}
+.nav_cover {
+  margin-top: -28px;
+  margin-left: 41px;
+  background-color: lavenderblush;
+}
+.nav_list{
+display: flex;
+}
+
+
+
+
+.list_wrapper{
+  float: left;
+  width: 210px;
+  height: 430px;
+  margin-top: 20px;
+  margin-left: 30px;
+  text-align: center;
+  border: 1px solid;
+  border-color: lightslategrey;
+  background-color: rgb(255, 209, 216);
+}
+.staff_list,
+.user_list {
+  width: 180px;
+  height: 400px;
+  margin-left: 10px;
+  margin-right: 10px;
+  display: inline-block;
+  text-align: left;
+  overflow: scroll;
+  background-color: rgb(255, 209, 216);
+}
+.staff_list_inner,
+.user_list_inner,
+.staff_list_ul,
+.user_list_ul {
+  width: 85%;
+  display: inline-block;
+  background-color: white;
+  border: 0.3px solid;
+  border-color: lightgrey;
+}
+.staff_list_name,
+.user_list_name {
+  display: inline-block;
+  text-align: left;
+  width: 153px;
+  font-size: 14px;
+}
+.staffs_list_title,
+.users_list_title {
+  display: inline-block;
+  margin-left: -20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.annotation_list,
+.annotation_list_user {
+  color: lightcoral;
+}
+
+/* -------- リンク処理 */
+.staff_list_name,
+.user_list_name {
+  text-decoration: none;
+  color: teal;
+}
+.staff_list_name:hover,
+.user_list_name:hover {
+  color: darkkhaki;
+}
+
+/* staffInfo.ejs, userInfo.ejs*/
+/* userRecord, recordSearch.ejs, pastRecord.ejs */
+.staff_info {
+  margin-top: 18px;
+  display: inline-block;
+  margin-left: 0px;
+  margin-left: 20%;
+}
+.user_info {
+  margin-top: 20px;
+  display: inline-block;
+  margin-left: 0px;
+  margin-left: 20%;
+}
+.annotation_list,
+.annotation_list_user {
+  margin-top: 26px;
+}
+
+table {
+  width: 100%;
+}
+
+.item {
+  text-align: right;
+}
+
+.info {
+  text-align: left;
+}
+.record_btn,
+.update_btn,
+.search_btn {
+  border-style: none;
+  background-color: transparent;
+  font-size: 14px;
+}
+
+/* test recorder.css */
+.data_form_user_record,
+.data_form_user_search {
+  margin-top: 18px;
+  padding-left: 20px;
+  width: 100%;
+  text-align: left;
+}
+.modal_btn_area {
+  text-align: center;
+}
+.recorder {
+  resize: none;
+  width: 88%;
+  height: 300px;
+  margin-top: 1px;
+  margin-left: 0px;
+  display: inline-block;
+}
+
+.recorderDate,
+.searchDate {
+  width: 250px;
+}
+.record_target,
+.search_target {
+  margin-bottom: 0px;
+  font-size: 12px;
+}
+
+.search_btn_record_page {
+  border-style: none;
+  background-color: transparent;
+  font-size: 14px;
+}
+
+.reset_btn,
+.modal_to_btn_record {
+  width: 60px;
+  float: left;
+  margin: 0px;
+}
+.reset2{
+  display: inline-block;
+  width: 100%;
+  text-align: left;
+  margin-left: 299px;
+}
+.modal_to_btn_record{
+  margin-left: 5px;
+}
+.search_page_search_btn {
+  margin-top: 6px;
+}
+
+.search_result {
+  width: 74%;
+  height: 410px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  margin-top: 6px;
+  margin-left: 20px;
+  color: dimgrey;
+  overflow: scroll;
+  border: 1px solid;
+  border-color: lightslategrey;
+  background-color: rgb(250, 248, 232);
+}
+.result_date,
+.result_care_record,
+.result_care_records_staff_name {
+  margin: 0px;
+}
+
+.result_border {
+  border-bottom: 1px solid;
+  border-color: lightslategrey;
+  margin-right: 0px;
+  margin-left: 0px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.result_date,
+.result_care_records_staff_name {
+  font-size: 12px;
+}
+.result_date {
+  float: left;
+  color: rgb(109, 25, 46);
+}
+.result_care_records_staff_name {
+  color: darkgreen;
+}
+.result_care_record {
+  font-size: 14px;
+}
+
+/* -------- リンク処理 */
+.update_staff_info,
+.update_user_info {
+  color: rgb(118, 33, 139);
+}
+.update_staff_info:hover,
+.update_user_info:hover {
+  color: rgb(107, 173, 189);
+}
+}

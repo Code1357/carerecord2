@@ -1,0 +1,29 @@
+<head>
+  <link href="/css/layout.css" rel="stylesheet">
+	<!-- <link href="/css/heder_footer.css" rel="stylesheet"> -->
+</head>
+
+<div class="r_login">
+	<% if (loggedIn) { %>
+	<p class="staff_id">社員ID:<%= staffs.name %></p><br><small>ver.1.0.0</small>
+	<% } %>
+</div>
+
+<div class=header>
+	<h1 class="r_title"> Web Care システム</h1>
+	<p class="r_border"></p>
+</div>
+
+<div class="header_wrapper">
+	<div class="">
+
+		<% if (loggedIn) { %>
+		<ul class="nav2">
+			<li class="nav-title"><a class="info_title">Cera Staff Page - 利用者情報</a></li>
+			<li class="nav_new" ><a href="/careRecords/new" class="nav_new_a">　新規登録</a></li>
+			<li class="nav_list"><a href="/careRecords/usersList" class="nav_list_a">／　リスト</a></li>
+		</ul>
+		<% } %>
+	</div>
+
+</div>

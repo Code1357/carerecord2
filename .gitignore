@@ -1,0 +1,2 @@
+# gitにnode_modulesを含まない設定
+/node_modules

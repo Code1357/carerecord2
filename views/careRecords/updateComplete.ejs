@@ -1,0 +1,36 @@
+<head>
+  <link href="/css/layout.css" rel="stylesheet">
+</head>
+
+<%- include('r_header'); %>
+
+<div class="newUserConfirmation_user">
+  <div>
+    <p class="newUserConfirmation">こちらの内容で修正いたしました</p>
+  </div>
+  <div class="newUserConfirmation_list">
+
+    <tr>
+      <th>入所日:<%= entranceData %></th><br>
+    </tr>
+    <tr>
+      <th>名前:<%= updateDate[0].user_name %></th><br>
+    </tr>
+    <tr>
+      <% if (updateDate[0].genders_gender_id == 1) { %>
+      <th>性別:男性</th>
+      <% } else { %>
+      <th>性別:女性</th>
+      <% }; %>
+      <br>
+    </tr>
+    <tr>
+      <% if (updateDate[0].adls_adl_id == 1) { %>
+      <th>ADL:自立</th>
+      <% } else if (updateDate[0].adls_adl_id == 2) { %>
+      <th>ADL:見守り</th>
+      <% } else { %>
+      <th>ADL:要介護</th>
+      <% }; %><br>
+    </tr>
+  </div>

@@ -1,0 +1,69 @@
+<head>
+<link href="/css/layout.css" rel="stylesheet">
+  <link href="/css/modal.css" rel="stylesheet">
+</head>
+
+<%- include('m_header'); %>
+
+<div id="mask" class="hidden"></div> <!-- 背景全体を暗くする -->
+
+<div class="data_form"> <!-- 次はここから/ 入力に大しての注釈を記述していく -->
+<p class="annotation"><small class="annotation_staff">社員番号は6桁の半角数字で入力してください<br> 性別,役職は半角数字で入力してください<br> パスワードは半角英字1文字以上、<br>　半角数字1文字以上を含み8桁〜15桁で作成してください</small></p>
+  <form class="signup" action="/managers/create1" method="POST">
+    <label for="inputEmployee">社員番号</label>
+    <input type="number" minlength="6" maxlength="6" name="employee_id" id="inputEmployee" class="form-control"
+      placeholder="社員番号" value="<%- newConfirmation.employee_id %>" autofocus>
+    <br />
+    <label for="inputHereDate">入社日</label>
+    <input type="date" name="hire_data" id="inputHereDate" class="form-control" placeholder="yyyy/mm/dd"
+      value="<%- newConfirmation.hire_data %>" required>
+    <br />
+    <label for="inputUsername">名前</label>
+    <input type="text" name="staff_name" id="inputUsername" class="form-control" placeholder="名前"
+      value="<%- newConfirmation.staff_name %>">
+    <br />
+    <label for="inputPassword">Password</label>
+    <input type="password" name="hash" id="inputPassword" class="form-control" placeholder="password"
+      value="<%- newConfirmation.hash %>" required>
+    <br />
+    <label for="inputBirthday">生年月日</label>
+    <input type="date" name="birthday" id="inputBirthday" class="form-control" placeholder="yyyy/mm/dd"
+      value="<%- newConfirmation.birthday %>" required>
+    <br />
+    <label for="inputGender">性別</label>
+    <input type="number" name="genders_gender_id" id="inputGender" class="form-control"
+      value="<%- newConfirmation.genders_gender_id %>" min="1" max="2" placeholder="1:男,2:女" required>
+    <br />
+    <label for="inputPosition">役職</label>
+    <input type="number" name="position_lists_position_id" id="inputPosition" class="form-control"
+      value="<%- newConfirmation.position_lists_position_id %>" min="1" max="3" placeholder="1:管理職,2:一般,3:見習い" required>
+    <br />
+    <div class="modal_off_btn">
+      <button type="">非modal登録</button>
+    </div>
+
+    <section id="modal" class="hidden">
+    <div class="output">
+      <h4>こちらの内容で登録しますか？</h4>
+      <h6 id="recMessage"></h6>
+      <p id="outputEmployee"></p>
+      <p id="outputHereDate"></p>
+      <p id="outputUsername"></p>
+      <p id="outPassword"></p>
+      <p id="outputBirthday"></p>
+      <p id="outputGender"></p>
+      <p id="outputPosition"></p>
+    </div>
+    
+
+      <button id="close" class="modal_btn" name='action2' value="ぼたん2だよ">戻る</button>
+      <button class="btn" name='action' value="ぼたんだよ">登録</button>
+    </section>
+  </form>
+  <div id="open">
+    <div class="modal_on_btn">
+      <button class="modal_on_btn_text" id="open_modal">modal登録</button>
+    </div>
+  </div>
+
+  <script src="/js/modalManager.js"></script>

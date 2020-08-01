@@ -1,0 +1,44 @@
+<head>
+  <link href="/css/layout.css" rel="stylesheet">
+</head>
+
+<%- include('m_header'); %>
+
+<div class="newConfirmation_employee">
+  <div>
+    <p class="newConfirmation">こちらの内容で修正いたしました</p>
+  </div>
+  <div class="newConfirmation_list">
+    <tr>
+      <th>社員番号:<%=updateDate[0].employee_id %></th><br>
+    </tr>
+    <tr>
+      <th>入社日:<%= hireData %></th><br>
+    </tr>
+    <tr>
+      <th>名前:<%= updateDate[0].staff_name %></th><br>
+    </tr>
+    <tr>
+      <th>Password:**********</th><br>
+    </tr>
+    <tr>
+      <th>生年月日:<%= birthday %></th><br>
+    </tr>
+    <tr>
+      <% if (updateDate[0].genders_gender_id == 1) { %>
+      <th>性別:男性</th>
+      <% } else { %>
+      <th>性別:女性</th>
+      <% }; %>
+      <br>
+    </tr>
+    <tr>
+      <% if (updateDate[0].position_lists_position_id == 1) { %>
+      <th>役職:管理職</th>
+      <% } else if (updateDate[0].position_lists_position_id == 2) { %>
+      <th>役職:一般</th>
+      <% } else { %>
+      <th>役職:見習い</th>
+      <% }; %><br>
+    </tr>
+  </div>

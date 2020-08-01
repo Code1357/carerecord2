@@ -1,0 +1,66 @@
+<head>
+  <link href="/css/layout.css" rel="stylesheet">
+  <!-- <link href="/css/listinfo.css" rel="stylesheet"> -->
+  <!-- <link href="/css/recorder.css" rel="stylesheet"> -->
+  <link href="/css/modal.css" rel="stylesheet">
+</head>
+
+<%- include('r_header'); %>
+
+<div id="mask" class="hidden"></div> <!-- 背景全体を暗くする -->
+
+<div id="js_wrapper" class="cover list_wrapper">
+    <p class="users_list_title">利用者 一覧</p>
+<div class="user_list">
+    <div class="user_list_in">
+        <% userList.forEach(userList => { %>
+        <ul class="user_list_ul">
+            <li id="user_list_inner">
+                <a class="user_list_name" href="<%=`/careRecords/users/${userList.user_id}`%>">
+                    <%= userList.user_name %></a>
+            </li>
+        </ul>
+        <% }); %>
+    </div>
+</div>
+</div>
+
+<p id="js_cover" class="nav_cover js-toggle-cover">　　　　>　一覧<a href="/managers/staffsList" class="nav_list_a"></a></p>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
+    </script>
+
+<script src="/js/listMenu.js"></script>
+
+<div class="data_form_user_record">
+<button class="search_btn_record_page" type="submit"><a class="update_user_info" href="<%=`/careRecords/searchPage/${userId}`%>">検索</a></button>
+<button class="update_btn" type="submit"><a class="update_user_info" href="<%=`/careRecords/updatePage/${userId}`%>">／　利用者情報修正</a></button>
+  <form action="<%=`/careRecords/recordCreate/${userId}`%>" method="post">
+    <p class="record_target">利用者名前：<%= userName%> ／　性別：<%= gender%> ／　ADL：<%= adl %></p><br>
+
+    <input type="datetime-local" name="record_date" id="inputRecordDate" class="recorderDate" placeholder="yyyy/mm/dd hh:mm" value=""
+      required><br>
+
+    <textarea name="record_data" id="inputRecord" class="recorder" placeholder="ここにCare記録を記述してください" value=""
+      required></textarea><br>
+    <button class="reset_btn" type="reset" value="リセット">リセット</button>
+
+    <section id="modal" class="hidden">
+     <div class="output">
+      <h4>Care記録を登録して良いですか？</h4>
+      <h6 id="recMessage"></h6>
+      </div>
+<div class="modal_btn_area">
+      <button id="close" class="modal_btn" name='action2' value="ぼたん2だよ">戻る</button>
+      <button class="btn" name='action' value="ぼたんだよ">登録</button>
+      </div>
+    </section>
+  </form>
+  <div id="open">
+
+      <button id="open_modal" class="modal_to_btn_record">登録</button>
+    </div>
+  </div>
+
+<script src="/js/modalRecord.js"></script>

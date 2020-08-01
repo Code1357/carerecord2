@@ -1,0 +1,54 @@
+<head>
+  <link href="/css/layout.css" rel="stylesheet">
+  <link href="/css/modal.css" rel="stylesheet">
+  <!-- <link href="/css/listinfo.css" rel="stylesheet"> -->
+</head>
+
+<%- include('r_header'); %>
+
+<div id="mask" class="hidden"></div> <!-- 背景全体を暗くする -->
+
+<div class="data_form_update">
+<p class="annotation"><small class="annotation_user_update"> 名前とADLのみ変更が可能です</small></p>
+  <form class="signup" action="<%=`/careRecords/update/${userId}/update?_method=PUT`%>" method="POST">
+
+    <label for="inputEntranceData">入所日</label>
+    <input type="" name="entrance_data" id="inputEntranceData" class="update_form" placeholder=""
+      value="<%= entranceData %>" readonly>
+    <br />
+    <label for="inputUserName">名前</label>
+    <input type="text" name="user_name" id="inputUserName" class="form-control" placeholder="名前"
+      value="<%= userUpdate[0].user_name %> ">
+
+    <br />
+
+    <label for="inputGender">性別</label>
+    <input type="number" name="genders_gender_id" id="inputGender" class="update_form"
+      value="<%= userUpdate[0].genders_gender_id %>" min="1" max="2" placeholder="1:男,2:女" readonly>
+    <br />
+    <label for="inputAdl">ADL</label>
+    <input type="number" name="adls_adl_id" id="inputAdl" class="form-control" value="<%= userUpdate[0].adls_adl_id %>"
+      min="1" max="3" placeholder="1:自立,2:見守り,3:要介護" required>
+    <br />
+
+    <section id="modal" class="hidden">
+    <div class="output">
+      <h4>こちらの内容で更新しますか？</h4>
+      <h6 id="recMessage"></h6>
+      <p id="outputEntranceData"></p>
+      <p id="outputUserName"></p>
+      <p id="outputGender"></p>
+      <p id="outputAdl"></p>
+      </div>
+
+      <button id="close" class="btn" name='action2' value="ぼたん2だよ">戻る</button>
+      <button class="btn" name='action' value="ぼたんだよ">更新</button>
+    </section>
+  </form>
+  <div id="open">
+    <div class="modal_to_btn">
+      <button id="open_modal">更新</button>
+    </div>
+  </div>
+
+  <script src="/js/modalUser.js"></script>

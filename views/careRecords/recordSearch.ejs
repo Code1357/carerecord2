@@ -1,0 +1,46 @@
+<head>
+  <link href="/css/layout.css" rel="stylesheet">
+  <!-- <link href="/css/listinfo.css" rel="stylesheet"> -->
+  <!-- <link href="/css/recorder.css" rel="stylesheet"> -->
+</head>
+
+<%- include('r_header'); %>
+
+<div id="js_wrapper" class="cover list_wrapper">
+    <p class="users_list_title">利用者 一覧</p>
+<div class="user_list">
+    <div class="user_list_in">
+        <% userList.forEach(userList => { %>
+        <ul class="user_list_ul">
+            <li id="user_list_inner">
+                <a class="user_list_name" href="<%=`/careRecords/users/${userList.user_id}`%>">
+                    <%= userList.user_name %></a>
+            </li>
+        </ul>
+        <% }); %>
+    </div>
+</div>
+</div>
+
+<p id="js_cover" class="nav_cover js-toggle-cover">　　　　>　一覧<a href="/managers/staffsList" class="nav_list_a"></a></p>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
+    </script>
+
+<script src="/js/listMenu.js"></script>
+
+<div class="data_form_user_search">
+<button class="record_btn" type="submit"><a class="update_user_info" href="<%=`/careRecords/recordPage/${userId}`%>">記録</a></button>
+<button class="update_btn" type="submit"><a class="update_user_info" href="<%=`/careRecords/updatePage/${userId}`%>">／　利用者情報修正</a></button>
+
+  <form action="<%=`/careRecords/recordSearch/${userId}`%>">
+
+    <p class="search_target">利用者名前：<%= userName%> ／　性別：<%= gender%> ／　ADL：<%= adl %></p><br>
+
+    <input type="date" name="search_date" id="inputSearch" class="searchDate" placeholder="yyyy/mm/dd" value="" required><br>
+
+    <button class="search_page_search_btn">検索</button>
+
+  </form>
+</div>

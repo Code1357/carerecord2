@@ -1,0 +1,23 @@
+<head>
+	<link href="/css/heder_footer.css" rel="stylesheet">
+</head>
+
+  <div class="">
+    <div class="">
+  <% if (loggedIn) { %>
+	<div class="logout">
+<p class="border"></p>
+
+	<% if (loggedIn) { %>
+	<button class="logout_btn" type="submit"><a href="/managers/logout">Log out</a></button>
+	<% } %>
+    <% } else { %>
+    <% if (!locals.top) { %>
+ <p class="none"></p>
+    <% } %>
+    <% } %>
+  </div>
+  </div>
+
+
+</div>

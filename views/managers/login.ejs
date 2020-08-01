@@ -1,0 +1,33 @@
+<head>
+  <link href="/css/layout.css" rel="stylesheet">
+</head>
+
+
+<div class="m_data_form">
+<p class="annotation"><small class="annotation_login">
+サンプルのためデフォルトアカウントを設定しています。<br>
+　<span class="sample_span">
+●社員番号(CareStaff):777777 ／ PASS:choko777<br>
+</span>
+　<span class="sample_span">
+●社員番号(管理者):888888 ／ PASS:choko777<br>
+</span>
+ ログイン後は管理者がCareStaffのアカウントを作成できます<br>
+ CareStaffは利用者の情報を作成できます<br>
+ ログイン後はそれぞれ、自由に登録してください<br>
+<span class="sample_span">
+　● 個人情報が特定できるような内容は入力しないでください<br>
+ </span>
+<span class="sample_span2">
+ 1分ほど操作がなければ、しばらくアクセスできなくなります(原因探り中)
+</span></small></p>
+  <form class="m_login_form" action="/managers/login" method="POST">
+    <label for="username">社員番号</label>
+    <input type="text" class="m_form" name="username" id="username" placeholder="6桁,半角英数字"><br>
+    <label for="m_password">パスワード</label>
+    <input type="password" class="m_form" name="password" id="m_password" placeholder="8桁〜15桁,半角英数字"><br>
+    <div class="m_btn_container2">
+      <button type="submit" class="m_btn">login</button>
+    </div>
+  </form>
+</div>

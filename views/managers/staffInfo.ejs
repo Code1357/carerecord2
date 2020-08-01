@@ -1,0 +1,63 @@
+<head>
+  <link href="/css/layout.css" rel="stylesheet">
+</head>
+
+<%- include('m_header'); %>
+
+<div id="js_wrapper" class="cover list_wrapper">
+    <p class="staffs_list_title">スタッフ 一覧</p>
+    <div class="staff_list">
+        <div class="staff_list_in">
+            <% staffList.forEach(staffList => { %>
+            <ul class="staff_list_ul">
+                <li id="staff_list_inner">
+                    <a class="staff_list_name" href="<%=`/managers/staffs/${staffList.staff_id}`%>">
+                        <%= staffList.staff_name %></a>
+                </li>
+            </ul>
+            <% }); %>
+        </div>
+    </div>
+</div>
+
+<p id="js_cover" class="nav_cover js-toggle-cover">　　　　>　一覧<a href="/managers/staffsList" class="nav_list_a"></a></p>
+
+<p class="explanation2">一覧をタップする事でリストが表示されます</p>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
+    </script>
+
+<script src="/js/listMenu.js"></script>
+<div class="staff_info">
+ <div>
+<button class="update_btn" type="submit"><a class="update_staff_info" href="<%=`/managers/updatePage/${staffId}`%>">スタッフ情報修正</a></button>
+</div>
+<p class="annotation"><small class="annotation_list"> 修正できるのは、名前・役職のみです</small></p>
+  <table>
+    <tr>
+      <td class="item">社員番号：</td>
+      <td class="info"><%= staffEmployeeId %> </td>
+    </tr>
+    <tr>
+      <td class="item">入社日：</td>
+      <td class="info"><%= hireData %> </td>
+    </tr>
+    <tr>
+      <td class="item">名前：</td>
+      <td class="info"><%=  staffName%> </td>
+    </tr>
+    <tr>
+      <td class="item">誕生日：</td>
+      <td class="info"><%=  birthday%> </td>
+    </tr>
+    <tr>
+      <td class="item">性別：</td>
+      <td class="info"><%=  gender%> </td>
+    </tr>
+    <tr>
+      <td class="item">役職：</td>
+      <td class="info"> <%= position %> </td>
+    </tr>
+  </table>
+</div>

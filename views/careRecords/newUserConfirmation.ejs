@@ -1,0 +1,34 @@
+<head>
+  <link href="/css/layout.css" rel="stylesheet">
+</head>
+
+<%- include('r_header'); %>
+
+<div class="newUserConfirmation_user">
+  <div>
+    <p class="newUserConfirmation">こちらの内容で登録しました</p>
+  </div>
+  <div class="newUserConfirmation_list">
+    <th>入所日:<%= newUserConfirmation.entrance_data %></th><br>
+    </tr>
+    <tr>
+      <th>名前:<%= newUserConfirmation.user_name %></th><br>
+
+    <tr>
+      <% if (newUserConfirmation.genders_gender_id == 1) { %>
+      <th>性別:男性</th>
+      <% } else { %>
+      <th>性別:女性</th>
+      <% }; %>
+      <br>
+    </tr>
+    <tr>
+      <% if (newUserConfirmation.adls_adl_id == 1) { %>
+      <th>役職:自立</th>
+      <% } else if (newUserConfirmation.adls_adl_id == 2) { %>
+      <th>役職:見守り</th>
+      <% } else { %>
+      <th>役職:要介護</th>
+      <% }; %><br>
+    </tr>
+  </div>

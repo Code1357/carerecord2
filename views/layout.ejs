@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+  <title>WEB Careシステム</title>
+  <!-- <link href="/css/reset.css" rel="stylesheet"> -->
+  <link href="/css/layout.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
+</head>
+
+<body>
+<div class="body_wrapper">
+  <header>
+  
+    <div class="flash">
+      <% if (flashMessages) { %>
+      <% if (flashMessages.success) { %>
+      <div class="flash success">
+        <%= flashMessages.success %>
+      </div>
+      <% } else if (flashMessages.error) { %>
+      <div class="flash error">
+        <%= flashMessages.error%>
+      </div>
+      <% } %>
+      <% } %>
+    </div>
+    
+    <div class="login_wrapper">
+    <div class="login_title">
+  <% if (loggedIn) { %>
+    <p class="none"></p>
+    <% } else { %>
+    <% if (!locals.top) { %>
+    <h1 class="login_main" >ログイン</h1>
+    <p class="login_sub" >-ログインしてください</p>
+    <% } %>
+    <% } %>
+  </div>
+  </div>
+  
+  </header>
+
+  <div class="container">
+    <%- body %>
+  </div>
+
+  <footer>
+
+    <div>
+      <%- include('partials/footer'); %>
+    </div>
+  </footer>
+  </div>
+</body>
+
+</html>
